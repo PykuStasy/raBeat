@@ -1,0 +1,87 @@
+body {
+    background-image: url('images/background-animation.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Цвет текста */
+}
+
+#start-button {
+    background-image: url('images/start-button.png'); /* Путь к вашему изображению */
+    background-size: cover; /* Изображение полностью покрывает кнопку */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    width: 300px; /* Установите желаемую ширину кнопки */
+    height: 150px; /* Установите желаемую высоту кнопки */
+    border: none; /* Убираем границы кнопки */
+    padding: 0; /* Убираем внутренние отступы */
+    cursor: pointer; /* Курсор указывает на то, что кнопка кликабельна */
+    background-color: transparent; /* Убираем фон кнопки */
+    display: inline-block; /* Делаем кнопку блочным элементом, чтобы изображение занимало все пространство */
+}
+
+/* Контейнеры */
+#start-container, #game-container {
+    width: 90%; /* Ширина контейнера */
+    height: 90vh; /* Высота контейнера в процентах от высоты экрана */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Игровое поле */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    background-image: url('images/holes-background.png'); /* Добавляем фон */
+    background-size: cover; /* Масштабируем изображение по размеру экрана */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    position: relative; /* Для точного позиционирования элементов */
+}
+
+/* Ячейки игрового поля */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-image: url('images/background.png'); /* Добавляем фон */
+    background-size: cover; /* Масштабируем изображение по размеру ячейки */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    border: 0; /* Убираем рамку */
+    position: relative; /* Для точного позиционирования животных внутри ячейки */
+}
+
+/* Изображения в ячейках */
+.cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#score {
+    font-size: 24px;
+    color: white; /* Цвет текста, чтобы он был виден на фоне */
+    position: absolute; /* Позволяет размещать элемент в нужном месте */
+    top: 10px; /* Расстояние от верхнего края контейнера */
+    right: 10px; /* Расстояние от правого края контейнера */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для улучшения читаемости */
+    padding: 5px 10px; /* Отступы внутри элемента */
+    border-radius: 5px; /* Скругленные углы */
+}
